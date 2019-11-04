@@ -1,20 +1,20 @@
 package ec.edu.utpl.sic.arqapl.tests;
 
 import ec.edu.utpl.sic.arqapl.TweetSimilarity;
-import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class TweetSimilarityTest {
-    public TweetSimilarityTest() {
-    }
+import static org.junit.Assert.assertEquals;
+
+public class SimilarityJaro {
 
     @Test
     public void similar() {
         var tweet1 = "Hola mundo";
         var tweet2 = "Hola mundo";
-        TweetSimilarity tsJaccard = new TweetSimilarity("jaccard");
+
+        TweetSimilarity tsJaro = new TweetSimilarity("jarowinkler");
         assertEquals(1.0,
-                tsJaccard.similarity(tweet1, tweet2), 0.1);
+                tsJaro.similarity(tweet1, tweet2), 0.1);
 
     }
 }

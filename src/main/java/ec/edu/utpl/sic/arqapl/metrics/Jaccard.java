@@ -11,4 +11,10 @@ public class Jaccard implements Similaritable {
 
         return similarity;
     }
+    @Override
+    public void algorithm(String name) {
+        if(name.toLowerCase().equals("jaccard")){
+            Jaccard obj = new Jaccard();
+        }
+    }
 }

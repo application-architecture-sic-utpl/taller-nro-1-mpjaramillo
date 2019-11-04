@@ -10,4 +10,10 @@ public class Cosine implements Similaritable {
 
         return similarity;
     }
+    @Override
+    public void algorithm(String name) {
+        if(name.toLowerCase().equals("cosine")){
+            Cosine obj = new Cosine();
+        }
+    }
 }
